@@ -9,4 +9,4 @@ NCVC add-in that reads JW_CAD data (JWW/JWC)
 Visual Studio 2015 Solution
 
 ## License
-"ReadJW" is under [BSD license (3-clause BSD License)] (https://github.com/NCVC-CAM/ReadJW/LICENSE)
+"ReadJW" is under [BSD license (3-clause BSD License)] 
