@@ -287,11 +287,27 @@ BOOL CDataTen::JWWtoNCVCdata
 BOOL CDataMoji::JWWtoNCVCdata
 	(NCVCHANDLE hDoc, const CJwwBlock&, const JWLAYER jwl[])
 {
+	static	CString		strIgnore[] = {
+		"Printer_Orientation =",
+		"Printer_PaperSize =",
+		"Printer_D2dBMP =",
+		"Printer_BmpZENTAI =",
+		"View_Direct2d =",
+		"Draw_BmpTOUKA ="
+	};
+	static	CPointD		ptIgnore(0, -1000);
+
 	BOOL	bResult = TRUE;
 	UINT	wLayer = GetLayer();
 	int		nLayer = CheckDataLayer(jwl, wLayer);
 
 	if ( nLayer>=DXFCAMLAYER && nLayer<=DXFCOMLAYER ) {
+		if ( m_pts==ptIgnore && m_pte==ptIgnore ) {
+			for ( int i=0; i<SIZEOF(strIgnore); i++ ) {
+				if ( strIgnore[i] == m_strText.Left(strIgnore[i].GetLength()) )
+					return bResult;
+			}
+		}
 		DXFDATA	dxf;
 		double	dScale = jwl[wLayer].dScale;
 		dxf.dwSize = sizeof(DXFDATA);

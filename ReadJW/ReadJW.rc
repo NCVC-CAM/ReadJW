@@ -13,13 +13,11 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// 日本語 resources
+// 日本語 (日本) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
-#ifdef _WIN32
 LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
 #pragma code_page(932)
-#endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -65,8 +63,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 3,0,0,2
- PRODUCTVERSION 3,0,0,2
+ FILEVERSION 3,0,1,0
+ PRODUCTVERSION 3,0,1,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x29L
@@ -84,15 +82,14 @@ BEGIN
             VALUE "Comments", "NCVC ReadJW Addin"
             VALUE "CompanyName", "MNCT-S"
             VALUE "FileDescription", "ReadJW DLL"
-            VALUE "FileVersion", "3, 0, 0, 2"
+            VALUE "FileVersion", "3.0.1.0"
             VALUE "InternalName", "ReadJW"
-            VALUE "LegalCopyright", "Copyright (C) 2003-2011 MNCT-S K.Magara"
+            VALUE "LegalCopyright", "Copyright (C) 2003-2022 MNCT-S K.Magara"
             VALUE "LegalTrademarks", "MNCT-S"
             VALUE "OriginalFilename", "ReadJW.DLL"
-            VALUE "PrivateBuild", "Debug Tool for MagaDebug32"
             VALUE "ProductName", "ReadJW ﾀﾞｲﾅﾐｯｸ ﾘﾝｸ ﾗｲﾌﾞﾗﾘ"
-            VALUE "ProductVersion", "3, 0, 0, 2"
-            VALUE "SpecialBuild", "VC++2008 with Ext MFC DLL"
+            VALUE "ProductVersion", "3.0.1.0"
+            VALUE "SpecialBuild", "VC++2015 with Ext MFC DLL"
         END
     END
     BLOCK "VarFileInfo"
@@ -111,17 +108,18 @@ END
 // remains consistent on all systems.
 IDR_APPNAME             ICON                    "res\\ReadJW.ico"
 
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // String Table
 //
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDR_APPNAME             "ReadJW"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_ERR_OUTOFMEM        "Out of memory"
     IDS_ERR_FILE            "指定されたﾌｧｲﾙ\n%s\nの操作で不正なｴﾗｰが発生しました．処理を中断します．"
@@ -131,7 +129,7 @@ BEGIN
     IDS_ERR_JWPAPER         "用紙ｻｲｽﾞが想定外のため縮尺を計算できませんでした"
 END
 
-#endif    // 日本語 resources
+#endif    // 日本語 (日本) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

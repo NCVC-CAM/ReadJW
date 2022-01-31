@@ -64,4 +64,9 @@
       <Filter>リソース ファイル</Filter>
     </ResourceCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\ReadJW.ico">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+  </ItemGroup>
 </Project>
